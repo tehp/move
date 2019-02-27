@@ -12,7 +12,7 @@
 #include "constants.hpp"
 
 Character::Character(int x, int y, int size, int jumps):
-x(x), y(y), size(size), ay(0), ax(0), jumps(jumps) { }
+x(x), y(y), size(size), ay(0.0), ax(0.0), jumps(jumps) { }
 
 void Character::right() {
     if (this->x < WIDTH - size) {
@@ -43,13 +43,17 @@ void Character::down() {
 
 void Character::gravity() {
     if (ay > -10 && ay < 10) {
-        ay -= 0.15;
+        ay -= 0.25;
     }
     if (ay > 0) {
         y += ay;
     }
     if (y > 0) {
-        y += ay;
+        if (y + ay < 0) { // stops players going below the floor
+            y = 0;
+        } else {
+            y += ay;
+        }
     }
     if (y <= 0) {
         ay = 0.0;

@@ -49,7 +49,7 @@ void Game::init(const char* title, int x, int y, int width, int height, bool ful
         isRunning = false;
     }
     
-    character = new Character(0, 0, 20, 2);
+    character = new Character(0, 0, DEFAULT_CHARACTER_SIZE, 2);
 }
 
 void Game::handleEvents() {
@@ -96,7 +96,7 @@ void Game::render() {
     SDL_RenderClear(renderer);
     
     SDL_Rect *player = new SDL_Rect();
-    player->x = character->get_x();
+    player->x = character->get_x() - character->get_size()/2;
     player->y = HEIGHT - character->get_y() - character->get_size();
     player->w = character->get_size();
     player->h = character->get_size();
