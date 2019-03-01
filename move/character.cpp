@@ -16,13 +16,13 @@ x(x), y(y), size(size), ay(0.0), ax(0.0), jumps(jumps) { }
 
 void Character::right() {
     if (this->x < WIDTH - size) {
-        this->x += 5;
+        this->x += 8;
     }
 }
 
 void Character::left() {
     if (this->x > 0) {
-        this->x -= 5;
+        this->x -= 8;
     }
 }
 

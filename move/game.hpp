@@ -8,6 +8,7 @@
 
 #include "SDL2/SDL.h"
 #include <iostream>
+#include "map.hpp"
 
 class Game {
 public:
@@ -30,4 +31,5 @@ private:
     bool isRunning;
     SDL_Window *window;
     SDL_Renderer *renderer;
+    Map *map;
 };

@@ -23,6 +23,10 @@ Game::~Game() {
 }
 
 void Game::init(const char* title, int x, int y, int width, int height, bool fullscreen) {
+    
+    map = new Map();
+    map->addTerrain(new Terrain(new Coordinate(300, 100), new Coordinate(500, 120)));
+
     int flags = 0;
     ticks = 0;
     
@@ -94,6 +98,25 @@ void Game::render() {
     // Background
     SDL_SetRenderDrawColor( renderer, 200, 200, 200, 255 );
     SDL_RenderClear(renderer);
+    
+    // Loop through pieces of terrain
+    for (auto const& i : map->getTerrain()) {
+        int startX = i->getStart().getX();
+        int startY = HEIGHT - i->getStart().getY();
+        
+        int endX = i->getEnd().getX() - startX;
+        int endY = HEIGHT - i->getEnd().getY() - startY;
+        
+        // Draw each piece of terrain
+        SDL_Rect *terrain =  new SDL_Rect();
+        terrain->x = startX;
+        terrain->y = startY;
+        terrain->w = endX;
+        terrain->h = endY;
+        
+        SDL_SetRenderDrawColor( renderer, 255, 0, 255, 255 );
+        SDL_RenderFillRect(renderer, terrain);
+    }
     
     SDL_Rect *player = new SDL_Rect();
     player->x = character->get_x() - character->get_size()/2;

@@ -12,6 +12,9 @@
 		26D1924C21C2624400407B0D /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D1924A21C2624400407B0D /* game.cpp */; };
 		26D1924F21C2660800407B0D /* logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D1924D21C2660800407B0D /* logger.cpp */; };
 		26D1925221C5973E00407B0D /* character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D1925021C5973E00407B0D /* character.cpp */; };
+		26EBC46A2229DA20004BB3FF /* map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26EBC4682229DA20004BB3FF /* map.cpp */; };
+		26EBC46D2229DACF004BB3FF /* terrain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26EBC46B2229DACF004BB3FF /* terrain.cpp */; };
+		26EBC4702229DB1C004BB3FF /* coordinate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26EBC46E2229DB1C004BB3FF /* coordinate.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +40,12 @@
 		26D1925021C5973E00407B0D /* character.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = character.cpp; sourceTree = "<group>"; };
 		26D1925121C5973E00407B0D /* character.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = character.hpp; sourceTree = "<group>"; };
 		26D1925321C5AD1D00407B0D /* constants.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = constants.hpp; sourceTree = "<group>"; };
+		26EBC4682229DA20004BB3FF /* map.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = map.cpp; sourceTree = "<group>"; };
+		26EBC4692229DA20004BB3FF /* map.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = map.hpp; sourceTree = "<group>"; };
+		26EBC46B2229DACF004BB3FF /* terrain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = terrain.cpp; sourceTree = "<group>"; };
+		26EBC46C2229DACF004BB3FF /* terrain.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = terrain.hpp; sourceTree = "<group>"; };
+		26EBC46E2229DB1C004BB3FF /* coordinate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = coordinate.cpp; sourceTree = "<group>"; };
+		26EBC46F2229DB1C004BB3FF /* coordinate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = coordinate.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +88,12 @@
 				26D1925121C5973E00407B0D /* character.hpp */,
 				26D1924D21C2660800407B0D /* logger.cpp */,
 				26D1924E21C2660800407B0D /* logger.hpp */,
+				26EBC4682229DA20004BB3FF /* map.cpp */,
+				26EBC4692229DA20004BB3FF /* map.hpp */,
+				26EBC46B2229DACF004BB3FF /* terrain.cpp */,
+				26EBC46C2229DACF004BB3FF /* terrain.hpp */,
+				26EBC46E2229DB1C004BB3FF /* coordinate.cpp */,
+				26EBC46F2229DB1C004BB3FF /* coordinate.hpp */,
 			);
 			path = move;
 			sourceTree = "<group>";
@@ -150,7 +165,10 @@
 				26D1924F21C2660800407B0D /* logger.cpp in Sources */,
 				26D1924121C261FA00407B0D /* main.cpp in Sources */,
 				26D1924C21C2624400407B0D /* game.cpp in Sources */,
+				26EBC4702229DB1C004BB3FF /* coordinate.cpp in Sources */,
+				26EBC46A2229DA20004BB3FF /* map.cpp in Sources */,
 				26D1925221C5973E00407B0D /* character.cpp in Sources */,
+				26EBC46D2229DACF004BB3FF /* terrain.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
